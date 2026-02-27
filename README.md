@@ -42,16 +42,18 @@ RoastMe CLI is a humorous command-line game that generates witty, sarcastic roas
 
 ```bash
 # 1. Clone or download this project
-cd tt
+cd RoastMe
 
 # 2. Install dependencies
 pip install -r requirements.txt
 
 # 3. Start roasting!
-python main.py start
+python main.py
 ```
 
 That's it! You're ready to get roasted! 🔥
+
+The app launches with an interactive menu - no commands to remember!
 
 ---
 
@@ -89,100 +91,74 @@ chmod +x main.py
 
 ## 📖 Usage Guide
 
-### 🎮 Interactive Mode (Recommended for First-Time Users)
+### 🎮 Main Menu Interface
 
-Start a full roast session with personalized questions:
-
-```bash
-python main.py start
-```
-
-**What happens:**
-1. You'll be asked for your name, hobby, major, and confidence level
-2. The game generates 5 personalized roasts
-3. You can type a comeback and get rated
-
-### 🎯 Customizing Your Experience
-
-#### Choose Difficulty Level
+Simply run the app and navigate through menus:
 
 ```bash
-# Gentle teasing (safe for work)
-python main.py start --level easy
-
-# Sharp sarcasm (default)
-python main.py start --level medium
-
-# Brutal honesty (not for the sensitive)
-python main.py start --level savage
+python main.py
 ```
 
-#### Choose Roast Style
+**Main Menu Options:**
+```
+🔥 ROASTME CLI 🔥
 
-```bash
-# Academic-focused roasts
-python main.py start --style academic
+Select an option:
 
-# Tech/nerd roasts
-python main.py start --style nerd
-
-# Mix all styles (default)
-python main.py start --style all
+  1. 🎮 Start Roast Session
+  2. ⚡ Quick Roast
+  3. 🎭 View Styles
+  4. 📊 View Levels
+  5. 🚪 Exit
 ```
 
-#### Combine Options
+### 🎯 Full Roast Session (Option 1)
 
-```bash
-# Savage academic roasts
-python main.py start --level savage --style academic
+A complete personalized roast experience:
 
-# Easy lifestyle roasts
-python main.py start --level easy --style lifestyle
-```
+1. **Select Difficulty** - Choose easy, medium, or savage
+2. **Select Style** - Pick a roast style or mix all
+3. **Enter Profile** - Name, hobby, major, confidence level
+4. **Get Roasted** - Receive 5 personalized roasts
+5. **Comeback Mode** - Defend yourself and get rated 1-10
 
-### ⚡ Quick Roast Mode
+### ⚡ Quick Roast (Option 2)
 
-Roast someone instantly without answering questions:
+Roast someone instantly:
 
-```bash
-# Basic quick roast
-python main.py roast "John"
+1. Enter the name to roast
+2. Select difficulty level
+3. Select roast style
+4. Choose number of roasts (1-10)
+5. Get instant roasts!
 
-# With custom difficulty and count
-python main.py roast "Sarah" --level savage --count 5
+### 🎭 View Styles (Option 3)
 
-# Specific style
-python main.py roast "Mike" --style nerd --level medium
-```
+See all available roast styles with descriptions and best-use cases.
+
+### 📊 View Levels (Option 4)
+
+See all difficulty levels with intensity ratings.
 
 ---
 
 ## 📚 Commands Reference
 
-### Main Commands
+The app now uses a **menu-driven interface** - no commands to remember!
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `start` | Interactive roast session | `python main.py start` |
-| `roast` | Quick roast a name | `python main.py roast "Alex"` |
-| `styles` | Show all roast styles | `python main.py styles` |
-| `levels` | Show difficulty levels | `python main.py levels` |
-| `--help` | Show help message | `python main.py --help` |
+| Menu Option | Description | What It Does |
+|-------------|-------------|--------------|
+| **1. Start Roast Session** | Full interactive experience | Collects your profile, generates 5 personalized roasts, rates your comeback |
+| **2. Quick Roast** | Fast roasting | Enter a name, select options, get instant roasts |
+| **3. View Styles** | Browse roast styles | See all 5 roast styles with descriptions |
+| **4. View Levels** | Browse difficulty levels | See all 3 difficulty levels with intensity ratings |
+| **5. Exit** | Quit the app | Returns to terminal |
 
-### Options for `start`
+### Navigation Tips
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--level` | `-l` | Difficulty: easy, medium, savage | medium |
-| `--style` | `-s` | Style: academic, nerd, overconfident, existential, lifestyle, all | all |
-
-### Options for `roast`
-
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--level` | `-l` | Difficulty: easy, medium, savage | medium |
-| `--style` | `-s` | Roast style (or "all") | all |
-| `--count` | `-c` | Number of roasts (1-10) | 3 |
+- All selections use **numbered menus** (1-5, 1-3, 1-6, etc.)
+- Press **Enter** to accept default selections
+- After each session, press **Enter** to return to the main menu
 
 ---
 
@@ -226,19 +202,48 @@ python main.py levels
 
 ## 💡 Examples
 
-### Example 1: First-Time User
+### Example 1: Full Roast Session
 
 ```bash
-$ python main.py start
+$ python main.py
 
 🔥 ROASTME CLI 🔥
+
+Select an option:
+
+  1. 🎮 Start Roast Session
+  2. ⚡ Quick Roast
+  3. 🎭 View Styles
+  4. 📊 View Levels
+  5. 🚪 Exit
+
+Enter your choice [1]: 1
+
+📊 Select Difficulty Level:
+
+  1. 🧸 Easy   - Playful teasing, gentle jabs
+  2. 🌶️ Medium - Sharp sarcasm, actual burns
+  3. 🔥 Savage - Brutal honesty, maximum damage
+
+Choose level [2]: 2
+
+🎭 Select Roast Style:
+
+  1. 📚 Academic    - Roasts about grades & study habits
+  2. 🤓 Nerd        - Tech-focused burns
+  3. 💪 Overconfident - For big egos, small results
+  4. 🌌 Existential - Deep, philosophical roasts
+  5. 🏠 Lifestyle   - Daily habits & living situations
+  6. 🎲 All Styles  - Mix of everything (default)
+
+Choose style [6]: 
 
 📝 Let's get to know you...
 
 Enter your name: Alex
 Enter your hobby: gaming
 Enter your major: Computer Science
-Rate your confidence: 7
+Rate your confidence [5]: 7
 
 ╭─ 🎯 Your Profile ─╮
 Name: Alex
@@ -272,30 +277,58 @@ Not bad for someone majoring in Computer Science.
 ╰────────────────────────╯
 
 Until next time, stay humble and touch grass.
+
+Press Enter to continue
 ```
 
 ### Example 2: Quick Roast a Friend
 
 ```bash
-$ python main.py roast "Dave" --level savage --count 5
+$ python main.py
 
 🔥 ROASTME CLI 🔥
 
+Select an option:
+
+  1. 🎮 Start Roast Session
+  2. ⚡ Quick Roast
+  3. 🎭 View Styles
+  4. 📊 View Levels
+  5. 🚪 Exit
+
+Enter your choice [1]: 2
+
+Enter name to roast: Dave
+
+📊 Select Difficulty Level:
+Choose level [2]: 3  # Savage!
+
+🎭 Select Roast Style:
+Choose style [6]: 
+
+Number of roasts [3]: 5
+
 🎤 Roasting Dave at savage difficulty (All Styles)...
 
-[1] Dave, your degree is basically a receipt for wasted tuition.
-[2] Dave, you're the human equivalent of a 404 error.
-[3] Dave, your confidence is a glitch in the simulation.
-[4] Dave, you're a cosmic accident with delusions of purpose.
-[5] Dave, your life is a browser tab you forgot to close.
+╭─ Roast #1 ─╮
+Dave, your degree is basically a receipt for wasted tuition.
+╰────────────╯
+
+╭─ Roast #2 ─╮
+Dave, you're the human equivalent of a 404 error.
+╰────────────╯
+
+... (3 more roasts)
+
+Press Enter to continue
 ```
 
-### Example 3: Style-Specific Roasting
+### Example 3: View Available Styles
 
 ```bash
-$ python main.py start --style academic --level easy
+$ python main.py
 
-# Only academic-themed gentle roasts
+# Select option 3 to see all roast styles in a formatted table
 ```
 
 ---
@@ -303,11 +336,11 @@ $ python main.py start --style academic --level easy
 ## 📁 Project Structure
 
 ```
-tt/
-├── main.py             # CLI entry point with all commands
+RoastMe/
+├── main.py             # Menu-driven CLI entry point
 ├── roast_engine.py     # Roast generation logic and randomization
 ├── roast_data.py       # 75+ roast templates organized by style/level
-├── requirements.txt    # Python dependencies (typer, rich)
+├── requirements.txt    # Python dependencies (rich)
 └── README.md          # This documentation file
 ```
 
@@ -315,10 +348,10 @@ tt/
 
 | File | Purpose | Lines of Code |
 |------|---------|---------------|
-| `main.py` | CLI commands, user interface, input handling | ~240 |
+| `main.py` | Menu system, user interface, input handling | ~260 |
 | `roast_engine.py` | Roast generation, comeback rating, randomization | ~135 |
 | `roast_data.py` | Template database, judgments, greetings | ~120 |
-| `requirements.txt` | Package dependencies | 2 |
+| `requirements.txt` | Package dependencies | 1 |
 
 ---
 
@@ -370,11 +403,17 @@ COMEBACK_JUDGMENTS = {
 
 ## ❓ FAQ
 
+### Q: How do I use the app?
+**A:** Just run `python main.py` and follow the menu prompts! No commands to remember.
+
+### Q: Can I still use command-line arguments?
+**A:** No, the app now uses a fully interactive menu system for easier navigation.
+
 ### Q: Is this appropriate for work?
 **A:** The "easy" difficulty is generally workplace-safe. Avoid "savage" mode around HR.
 
 ### Q: Can I roast someone without them knowing?
-**A:** Use `python main.py roast "Name"` for quick anonymous roasting!
+**A:** Use the "Quick Roast" option (Option 2) for fast anonymous roasting!
 
 ### Q: How many unique roasts are there?
 **A:** 75+ templates across 5 styles and 3 difficulty levels.
@@ -422,8 +461,7 @@ This is a **fun project** meant for entertainment only.
 ## 🙏 Credits
 
 Built with:
-- [Typer](https://typer.tiangolo.com/) - CLI framework
-- [Rich](https://rich.readthedocs.io/) - Terminal formatting
+- [Rich](https://rich.readthedocs.io/) - Terminal formatting library
 
 Made with ❤️ for bored students everywhere.
 
